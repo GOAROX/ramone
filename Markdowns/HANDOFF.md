@@ -2,7 +2,8 @@
 
 > **Last Updated:** October 3, 2026  
 > **Status:** Version 1 (Local-First MVP) — In Progress  
-> **Current Milestone:** Prediction Engine Complete & Tested $\rightarrow$ Moving to SQLite Storage Layer
+> **Git Status:** Commit `fa7bec5` ("engine first iteration") pushed to `main`  
+> **Current Milestone:** Prediction Engine Complete & Tested $\rightarrow$ In-App Persona Preview & SQLite Storage Layer
 
 ---
 
@@ -53,6 +54,23 @@ As confirmed in [`Markdowns/Development-Options.md`](file:///c:/Users/GOA/Docume
    * `npx tsc --noEmit` passed with 0 errors.
    * `npx expo lint` passed with 0 errors and 0 warnings.
 
+7. **Git Commit & Push:**
+   * All work committed as `fa7bec5` (`"engine first iteration"`) and pushed to GitHub `origin/main`.
+
+---
+
+## 🧪 Current Algorithm Test Results
+
+Ran via `npx tsx scripts/test-algorithm.ts`:
+
+| Persona | Archetype | Inputs | Predicted Cycle | Regularity | Outliers Filtered | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Sarah** | Classic Regular | 6 cycles (~28d, 5d flow) | **28 days** ($\pm 1$d) | Regular | 0 | ✅ **PASS** |
+| **Maya** | Short Cycle | 6 cycles (24–25d, 4d flow) | **25 days** ($\pm 1$d) | Regular | 0 | ✅ **PASS** |
+| **Elena** | Irregular / Variable | 6 cycles (27–35d, 6d flow) | **31 days** ($\pm 3$d) | Slightly Irregular | 0 | ✅ **PASS** |
+| **Chloe** | Outlier Spike | 5 normal (29–30d) + 1 spike (48d) | **29 days** ($\pm 1$d) | Regular | **1 (48d spike)** | ✅ **PASS** |
+| **Aria** | Cold Start | 1 cycle (start date only) | **28 days** (baseline) | Insufficient Data | 0 | ✅ **PASS** |
+
 ---
 
 ## 📂 Current Project Structure
@@ -84,15 +102,17 @@ ramone/
 
 ## 📋 Immediate Next Steps for Next Session
 
-1. **Install `expo-sqlite`:**
+1. **Optionally Wire In-App Persona Switcher:**
+   * Add a quick toggle in the app so the user can switch between Sarah, Maya, Elena, Chloe, and Aria in the simulator/browser (`npx expo start`) and visually watch the `HeroCircle` and `Calendar` adapt live.
+2. **Install `expo-sqlite`:**
    * Run `npx expo install expo-sqlite`.
-2. **Implement SQLite Database Layer (`src/db/`):**
+3. **Implement SQLite Database Layer (`src/db/`):**
    * Create database connection initialization.
    * Create migration/schema script for `cycles`, `daily_logs`, and `user_settings` tables.
-3. **Build Data Access Repositories:**
+4. **Build Data Access Repositories:**
    * `CycleRepository`: Query the last 6 cycles ordered by start date to feed into `predictNextCycle()`.
    * `DailyLogRepository`: Record daily flow, cramps, mood, and symptoms.
-4. **Connect SQLite Data into App State:**
+5. **Connect SQLite Data into App State:**
    * Create a `CycleContext` / hook to supply real logged cycles to `TodayScreen` and `CalendarScreen`.
-5. **Verify Regression Suite:**
+6. **Verify Regression Suite:**
    * Follow [`Markdowns/Unit-tests.md`](file:///c:/Users/GOA/Documents/Projects/ramone/Markdowns/Unit-tests.md) to ensure all tests, lint, and typechecks continue passing.
