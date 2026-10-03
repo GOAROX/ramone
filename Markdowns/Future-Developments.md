@@ -67,6 +67,18 @@ To fulfill **Option A (Local-First Architecture)**, Ramone must store all cycle 
 
 ---
 
-## ☁️ 6. Version 2 Consideration: Optional Cloud Functions
+## 📅 7. Calendar UI Enhancements & Interactive Date Editing
+
+* **Visual Phase Tints & Event Icons:**
+  * **Event Icons on Cells:** Display crisp mini-icons directly on calendar cells (e.g., water/blood drop for period flow days, flower/star for confirmed or predicted ovulation day).
+  * **Phase Background Coloration:** Apply soft, distinct pastel/glass tints across cycle phases (e.g., gentle crimson for Menstrual Phase, soft lavender for Follicular, radiant coral for Ovulation, and warm peach/amber for Luteal Phase) allowing the user to scan the entire month at a glance.
+* **Direct Interactive Day Editing & Correction:**
+  * **Tap to Correct / Log:** Users can tap directly on any calendar day (today, past days, or predicted dates) to open an editing modal.
+  * **Real-Time Override:** If the 5th is predicted as period start, but bleeding began on the 3rd (or hasn't arrived yet), the user can tap that date to log "Period Started Here" or adjust flow intensity.
+  * **Instant Recalibration:** Saving corrected info immediately recalculates cycle boundaries, runs `predictNextCycle()`, and shifts future predicted dates across both the calendar and home screens.
+
+---
+
+## ☁️ 8. Version 2 Consideration: Optional Cloud Functions
 
 * As defined in [Development-Options.md](file:///c:/Users/GOA/Documents/Projects/ramone/Markdowns/Development-Options.md), evaluate opt-in multi-device synchronization (via Supabase or Firebase) strictly as a secondary phase after Version 1 local-first is fully shipped.

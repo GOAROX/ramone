@@ -114,5 +114,9 @@ ramone/
    * `DailyLogRepository`: Record daily flow, cramps, mood, and symptoms.
 5. **Connect SQLite Data into App State:**
    * Create a `CycleContext` / hook to supply real logged cycles to `TodayScreen` and `CalendarScreen`.
-6. **Verify Regression Suite:**
+6. **Calendar UI Enhancements & Interactive Day Editing:**
+   * Add mini-icons on calendar cells (water drop for period flow, flower/sparkle for ovulation).
+   * Apply subtle background phase tints across the calendar grid (Menstrual, Follicular, Ovulation, Luteal).
+   * Enable tapping directly on any calendar day to log/override corrected info (e.g. adjust period start) with instant recalculation.
+7. **Verify Regression Suite:**
    * Follow [`Markdowns/Unit-tests.md`](file:///c:/Users/GOA/Documents/Projects/ramone/Markdowns/Unit-tests.md) to ensure all tests, lint, and typechecks continue passing.
