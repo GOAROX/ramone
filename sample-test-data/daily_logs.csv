@@ -1,0 +1,14 @@
+user_name,date,flow_intensity,cramps_intensity,mood,energy_level,notes
+Sarah,2026-02-19,heavy,severe,irritable,low,Day 1 of period - bad cramps
+Sarah,2026-02-20,heavy,moderate,tired,low,Day 2 of period
+Sarah,2026-02-21,medium,mild,neutral,medium,Day 3 of period
+Sarah,2026-02-22,light,none,happy,high,Day 4 of period
+Sarah,2026-02-23,spotting,none,energetic,high,Day 5 of period - tail end
+Sarah,2026-02-24,none,none,happy,high,Follicular phase begins
+Sarah,2026-03-04,none,none,calm,high,Estimated ovulation window
+Elena,2026-02-19,heavy,severe,anxious,low,Severe PMS & Day 1
+Elena,2026-02-20,heavy,severe,tired,low,Heavy bleeding
+Elena,2026-02-21,medium,moderate,moody,medium,Gradual relief
+Elena,2026-02-22,medium,mild,calm,medium,Better today
+Elena,2026-02-23,light,none,happy,high,Light flow
+Elena,2026-02-24,spotting,none,calm,high,Spotting only

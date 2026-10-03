@@ -1,0 +1,35 @@
+user_name,cycle_number,period_start_date,period_end_date,period_duration_days,cycle_length_days,notes
+# Profile 1: Sarah — Classic Regular Clockwork (28-day cycles, 5-day period)
+Sarah,1,2025-10-01,2025-10-05,5,28,Normal cycle
+Sarah,2,2025-10-29,2025-11-02,5,28,Normal cycle
+Sarah,3,2025-11-26,2025-11-30,5,29,Slight 1-day variance
+Sarah,4,2025-12-25,2025-12-29,5,28,Normal cycle
+Sarah,5,2026-01-22,2026-01-26,5,28,Normal cycle
+Sarah,6,2026-02-19,2026-02-23,5,28,Normal cycle
+
+# Profile 2: Maya — Consistent Short Cycles (24-25 day cycles, 4-day period)
+Maya,1,2025-10-05,2025-10-08,4,24,Short follicular phase
+Maya,2,2025-10-29,2025-11-01,4,25,Normal short cycle
+Maya,3,2025-11-23,2025-11-26,4,24,Normal short cycle
+Maya,4,2025-12-17,2025-12-20,4,25,Normal short cycle
+Maya,5,2026-01-11,2026-01-14,4,24,Normal short cycle
+Maya,6,2026-02-04,2026-02-07,4,25,Normal short cycle
+
+# Profile 3: Elena — Naturally Irregular / Variable (26-35 day cycles)
+Elena,1,2025-09-15,2025-09-20,6,32,Mild cramps
+Elena,2,2025-10-17,2025-10-22,6,27,Shorter cycle
+Elena,3,2025-11-13,2025-11-17,5,34,Longer cycle
+Elena,4,2025-12-17,2025-12-22,6,29,Average cycle
+Elena,5,2026-01-15,2026-01-20,6,35,Exam stress
+Elena,6,2026-02-19,2026-02-24,6,30,Normal variance
+
+# Profile 4: Chloe — Regular with One Extreme Outlier (Illness/Travel)
+Chloe,1,2025-09-01,2025-09-05,5,29,Normal cycle
+Chloe,2,2025-09-30,2025-10-04,5,30,Normal cycle
+Chloe,3,2025-10-30,2025-11-03,5,48,Severe flu and international flight (outlier)
+Chloe,4,2025-12-17,2025-12-21,5,29,Returned to baseline
+Chloe,5,2026-01-15,2026-01-19,5,30,Normal cycle
+Chloe,6,2026-02-14,2026-02-18,5,29,Normal cycle
+
+# Profile 5: Aria — Cold Start / New User (Only 1 cycle logged so far)
+Aria,1,2026-02-01,2026-02-05,5,,First cycle logged (baseline needed)
